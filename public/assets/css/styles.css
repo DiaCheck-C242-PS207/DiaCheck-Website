@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Light Color */
+  --primary-color:  #FE5E49;
+  --secondary-color: #ACACAC;
+  --background-color: #FEFEFF;
+  --background-input: #F0F0F0;
+  --text-color: #202429;
+  --input-color: #ACACAC;
+
+  /* Transisi */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+
+/* Loading Screen */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#loading-screen.fade-out {
+  animation: fadeOut 3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--tran-05);
+}
+
+
+body.dark {
+  /* Dark Color */
+  --primary-color: #EF4138;
+  --secondary-color: #1A1927;
+  --background-color: #090717;
+  --background-input: #1A1927;
+  --text-color: #DFE3E6;
+  --input-color: #ACACAC;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Dark Mode Button */
+.dark-mode-auth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 25px;
+}
+.dark-mode-auth button {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+}
+.dark-mode-auth button:hover {
+  background-color: var(--background-input);
+  border-color: var(--primary-color);
+  transition: var(--tran-03);
+  color: var(--primary-color);
+}
+.dark-mode-auth button:hover i {
+  color: var(--primary-color);
+  transition: var(--tran-03);
+}
+.dark-mode-auth button i {
+  color: var(--text-color);
+  padding: 10px;
+}
+/* Dark Mode Button End */
+
+
+
+/* Colors */
+a {
+  color: var(--primary-color) !important;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+.text-color {
+  color: var(--text-color);
+}
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+.bg-color {
+  background-color: var(--background-color) !important;
+}
+/* Colors End */
+
+
+/* Text Size */
+h1 {
+  font-size: clamp(30px, 2.5vw, 35px);
+}
+h2 {
+  font-size: clamp(25px, 2.5vw, 30px);
+}
+h3 {
+  font-size: clamp(20px, 2.5vw, 25px);
+}
+h4 {
+  font-size: clamp(17px, 2.5vw, 20px);
+}
+h5 {
+  font-size: clamp(15px, 2.5vw, 17px);
+}
+h6, a, span, p {
+  font-size: clamp(13px, 2.5vw, 15px);
+}
+/* Text Size End */
+
+
+
+/* Auth */
+.pass-logo {
+  position: absolute;
+  height: 35px;
+  width: 38px;
+  background: transparent;
+  line-height: 60px;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 15px;
+  z-index: 999;
+}
+.content .pass-logo i.bx,
+.showPass {
+  color: var(--input-color);
+  position: relative;
+}
+.content input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--background-input);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 15px 10px 15px 45px;
+  outline: none;
+  background: var(--background-input);
+}
+.content input::placeholder {
+  color: var(--input-color);
+}
+input.form-control:focus,
+input.form-control:-webkit-autofill {
+  box-shadow: none;
+  border-color: var(--primary-color) !important;
+  background: var(--background-input) !important;
+  color: var(--text-color) !important;
+}
+
+.btn {
+  border-radius: 10px !important;
+  padding: 10px 5px;
+}
+.btn-login-with-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+.btn-login-with-google:hover {
+  background-color: var(--background-input) !important;
+  border-color: var(--primary-color) !important;
+  transition: var(--tran-05);
+}
