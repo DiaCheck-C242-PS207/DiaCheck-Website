@@ -16,6 +16,8 @@
   --text-color: #202429;
   --input-color: #ACACAC;
 
+  --nav-color: #f8f9fa;
+
   /* Transisi */
   --tran-02: all 0.2s ease;
   --tran-03: all 0.3s ease;
@@ -53,6 +55,8 @@ body.dark {
   --text-color: #DFE3E6;
   --input-color: #ACACAC;
 
+  --nav-color: #1A1927;
+
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -64,6 +68,7 @@ body.dark {
   right: 0;
   margin: 25px;
 }
+.dark-mode button,
 .dark-mode-auth button {
   background-color: transparent;
   border: 1px solid var(--text-color);
@@ -72,16 +77,19 @@ body.dark {
   margin: 0;
   border-radius: 50%;
 }
+.dark-mode button:hover,
 .dark-mode-auth button:hover {
   background-color: var(--background-input);
   border-color: var(--primary-color);
   transition: var(--tran-03);
   color: var(--primary-color);
 }
+.dark-mode button:hover i,
 .dark-mode-auth button:hover i {
   color: var(--primary-color);
   transition: var(--tran-03);
 }
+.dark-mode button i,
 .dark-mode-auth button i {
   color: var(--text-color);
   padding: 10px;
@@ -96,7 +104,7 @@ a {
 }
 
 .primary-color {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 .text-color {
   color: var(--text-color);
@@ -108,7 +116,17 @@ a {
 .bg-color {
   background-color: var(--background-color) !important;
 }
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+.bg-modal {
+  background-color: var(--nav-color) !important;
+}
 /* Colors End */
+
 
 
 /* Text Size */
@@ -189,3 +207,149 @@ input.form-control:-webkit-autofill {
   border-color: var(--primary-color) !important;
   transition: var(--tran-05);
 }
+/* Auth End */
+
+
+
+/* Navbar */
+.navbar {
+  background-color: var(--nav-color);
+}
+.navbar .logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.navbar .logo-nav img {
+  width: 60px;
+}
+.navbar .profile-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.navbar .profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.navbar-nav .nav-item a {
+  color: var(--text-color) !important;
+  opacity: 0.6;
+}
+.navbar-nav .nav-item a.active {
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  opacity: 1;
+}
+.navbar-nav .nav-item a:hover {
+  color: var(--primary-color) !important;
+  transition: var(--tran-03);
+  opacity: 0.8;
+}
+/* Navbar End */
+
+
+
+/* Nav Bottom */
+@media (min-width: 768px) {
+  .nav-bottom {
+    display: none !important;
+  }
+}
+.nav-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--nav-color);
+  position: fixed;
+  border-radius: 10px 10px 0 0;
+  border-top: 2px solid var(--background-color);
+}
+.nav-bottom ul {
+  display: flex;
+  width: 100%;
+  margin-left: -20px;
+}
+.nav-bottom ul li {
+  position: relative;
+  margin-top: 30px;
+  list-style: none;
+  width: 100%;
+  z-index: 1;
+}
+.nav-bottom ul li a {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+}
+.nav-bottom ul li a i.bx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+  font-size: 25px;
+  opacity: 0.6;
+}
+.nav-bottom ul li a span.icon {
+  position: relative;
+  display: block;
+  text-align: center;
+  transition: var(--tran-05);
+  width: 60px;
+  height: 60px;
+  color: var(--text-color);
+  border-radius: 50%;
+}
+.nav-bottom ul li.active a span.icon {
+  transform: translateY(-25px);
+  background: var(--primary-color);
+  border: 4px solid var(--background-color);
+}
+.nav-bottom ul li.active a span.icon i {
+  color: #FEFEFF;
+  opacity: 1;
+}
+.nav-bottom ul li a .text {
+  position: absolute;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 0.7em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+}
+.nav-bottom ul li.active a .text {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+@media (max-width: 360px) {
+  .nav-bottom {
+    height: 40px;
+  }
+  .nav-bottom ul li {
+    margin-top: 20px;
+  }
+  .nav-bottom ul li a i.bx {
+    font-size: 15px;
+  }
+  .nav-bottom ul li a span.icon {
+    width: 50px;
+    height: 50px;
+  }
+  .nav-bottom ul li.active a span.icon {
+    transform: translateY(-15px);
+  }
+}
+/* Nav Bottom End */
