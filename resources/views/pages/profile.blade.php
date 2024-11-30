@@ -137,7 +137,7 @@
                 title: 'Are you sure?',
                 text: 'Are you sure you want to delete this avatar?',
                 showCancelButton: true,
-                confirmButtonText: 'Hapus',
+                confirmButtonText: 'Delete',
                 customClass: {
                     popup: 'bg-modal',
                     title: 'text-color',
