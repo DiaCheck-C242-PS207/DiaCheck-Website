@@ -14,6 +14,7 @@
         <button class="dark-mode-toggle"><i class='bx bx-sun'></i></button>
     </div>
     <div class="container">
+        @include('components.toast')
         @yield('content')
     </div>
     @include('components.script')
