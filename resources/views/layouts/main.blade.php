@@ -10,6 +10,7 @@
 <body>
     @include('components.navbar')
     <div class="container">
+        @include('components.toast')
         @yield('content')
     </div>
     @include('components.nav-bottom')

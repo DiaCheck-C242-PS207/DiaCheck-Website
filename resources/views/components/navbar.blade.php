@@ -20,7 +20,7 @@
                         class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'articles' ? 'active' : '' }}"><i class='bx {{ $active == 'articles' ? 'bxs-news' : 'bx-news' }}'></i> Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#"
+                    <a href="{{ route('profile.index') }}"
                         class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'profile' ? 'active' : '' }}"><i class='bx {{ $active == 'profile' ? 'bxs-user' : 'bx-user' }}'></i> Profile</a>
                 </li>
             </ul>
@@ -37,14 +37,14 @@
         function logout() {
             Swal.fire({
                 icon: 'question',
-                title: 'Anda Yakin?',
-                text: 'Apakah Anda yakin ingin logout?',
+                title: 'Are you sure?',
+                text: 'Are you sure you want to logout?',
                 showCancelButton: true,
                 confirmButtonText: 'Logout',
                 customClass: {
                     popup: 'bg-modal',
                     title: 'text-color',
-                    htmlContainer: 'text-color',
+                    htmlContainer: 'text-color fw-normal',
                     icon: 'border-primary primary-color',
                     closeButton: 'bg-secondary border-0 shadow-none',
                     confirmButton: 'bg-danger border-0 shadow-none',
