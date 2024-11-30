@@ -13,7 +13,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#"
-                        class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'prediction' ? 'active' : '' }}"><i class='bx {{ $active == 'prediction' ? 'bxs-notepad' : 'bx-notepad' }}'></i> Prediction</a>
+                        class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'predictions' ? 'active' : '' }}"><i class='bx {{ $active == 'predictions' ? 'bxs-notepad' : 'bx-notepad' }}'></i> Predictions</a>
                 </li>
                 <li class="nav-item">
                     <a href="#"
