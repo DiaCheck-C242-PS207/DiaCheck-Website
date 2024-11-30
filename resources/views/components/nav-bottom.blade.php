@@ -22,7 +22,7 @@
             </a>
         </li>
         <li class="list {{ $active === 'profile' ? 'active' : '' }}">
-            <a href="#" title="Profile">
+            <a href="{{ route('profile.index') }}" title="Profile">
                 <span class="icon">
                     <i class='bx {{ $active == 'profile' ? 'bxs-user' : 'bx-user' }}'></i>
                 </span>
