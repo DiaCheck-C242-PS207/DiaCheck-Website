@@ -81,7 +81,7 @@
                     <form id="reset-avatar-form-{{ $user->id }}"
                         action="{{ route('profile.delete.avatar', $user->id) }}" method="POST">
                         @csrf @method('DELETE')
-                        <button type="button" onclick="resetAvatar({{ $user->id }})">Hapus</button>
+                        <button type="button" onclick="resetAvatar({{ $user->id }})">Delete</button>
                     </form>
                 </div>
 
