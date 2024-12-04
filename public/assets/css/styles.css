@@ -106,12 +106,16 @@ a {
 .primary-color {
   color: var(--primary-color) !important;
 }
-.text-color {
+.text-color,
+label {
   color: var(--text-color);
 }
 .btn-primary {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
 }
 .bg-color {
   background-color: var(--background-color) !important;
@@ -359,6 +363,47 @@ input.form-control:-webkit-autofill {
 
 
 
+/* Predictions */
+.card {
+  background-color: var(--nav-color) !important;
+  border: none !important;
+  border-radius: 10px !important;
+}
+.card-body input {
+  background-color: var(--background-input) !important;
+  border-color: var(--input-color) !important;
+  border-radius: 10px !important;
+  color: var(--text-color) !important;
+}
+.card-body input:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: none !important;
+}
+.card-body input::placeholder {
+  color: var(--input-color);
+}
+.card-body select {
+  background-color: var(--background-input) !important;
+  border-color: var(--input-color) !important;
+  border-radius: 10px !important;
+  color: var(--text-color) !important;
+}
+.card-body select:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: none !important;
+}
+/* Predictions End */
+
+
+
+/* History */
+.more-detail-content table tr td,
+.more-detail-content table tr th {
+  background-color: var(--nav-color) !important;
+  color: var(--text-color) !important;
+}
+/* History End */
+
 
 
 
@@ -388,6 +433,7 @@ input.form-control:-webkit-autofill {
 }
 
 .container-edit-akun .edit-profile,
+.container-edit-akun .history,
 .container-edit-akun .logout {
   background-color: var(--background-input);
   border: none;
@@ -401,7 +447,9 @@ input.form-control:-webkit-autofill {
   background-color: transparent !important;
 }
 .container-edit-akun .edit-profile:hover i,
-.container-edit-akun .edit-profile:hover h5 {
+.container-edit-akun .history:hover i,
+.container-edit-akun .edit-profile:hover h5,
+.container-edit-akun .history:hover h5 {
   color: var(--primary-color);
   transition: var(--tran-03);
 }

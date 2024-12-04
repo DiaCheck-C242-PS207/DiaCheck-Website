@@ -7,8 +7,8 @@
                 </span>
             </a>
         </li>
-        <li class="list {{ $active === 'prediction' ? 'active' : '' }}">
-            <a href="#" title="Prediction">
+        <li class="list {{ $active === 'predictions' ? 'active' : '' }}">
+            <a href="{{ route('predictions.index') }}" title="Prediction">
                 <span class="icon">
                     <i class='bx {{ $active == 'prediction' ? 'bxs-notepad' : 'bx-notepad' }}'></i>
                 </span>
