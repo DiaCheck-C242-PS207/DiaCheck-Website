@@ -12,7 +12,7 @@
                         class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'home' ? 'active' : '' }}"><i class='bx {{ $active == 'home' ? 'bxs-home' : 'bx-home-alt-2' }}'></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#"
+                    <a href="{{ route('predictions.index') }}"
                         class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'predictions' ? 'active' : '' }}"><i class='bx {{ $active == 'predictions' ? 'bxs-notepad' : 'bx-notepad' }}'></i> Predictions</a>
                 </li>
                 <li class="nav-item">
