@@ -7,7 +7,7 @@
                     <i class='bx bxs-check-circle text-success fs-2'></i>
                     <span class="ms-2 my-0 py-0 fw-medium">{{ session('success') }}</span>
                 </div>
-                <button type="button" class="btn-close me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <i type="button" class="bx bx-x text-color fs-4 me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></i>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
                     <i class='bx bxs-x-circle text-danger fs-2'></i>
                     <span class="ms-2 my-0 py-0 fw-medium">{{ session('error') }}</span>
                 </div>
-                <button type="button" class="btn-close me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="bx bx-x text-color fs-4 me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
                     <i class='bx bxs-x-circle text-danger fs-2'></i>
                     <span class="ms-2 my-0 py-0 fw-medium">{{ $errors->first('name') }}</span>
                 </div>
-                <button type="button" class="btn-close me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="bx bx-x text-color fs-4 me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -52,7 +52,7 @@
                     <i class='bx bxs-x-circle text-danger fs-2'></i>
                     <span class="ms-2 my-0 py-0 fw-medium">{{ $errors->first('email') }}</span>
                 </div>
-                <button type="button" class="btn-close me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="bx bx-x text-color fs-4 me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@
                     <i class='bx bxs-x-circle text-danger fs-2'></i>
                     <span class="ms-2 my-0 py-0 fw-medium">{{ $errors->first('password') }}</span>
                 </div>
-                <button type="button" class="btn-close me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="bx bx-x text-color fs-4 me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
     </div>
@@ -82,7 +82,7 @@
                     <i class='bx bxs-x-circle text-danger fs-2'></i>
                     <span class="ms-2 my-0 py-0 fw-medium">{{ $errors->first('avatar') }}</span>
                 </div>
-                <button type="button" class="btn-close me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="bx bx-x text-color fs-4 me-3 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
         </div>
     </div>
