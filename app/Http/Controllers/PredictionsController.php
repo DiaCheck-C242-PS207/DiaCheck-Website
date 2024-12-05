@@ -11,11 +11,14 @@ class PredictionsController extends Controller
 {
     public function index()
     {
+        $predictions = Predictions::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
         return view('pages.predictions', [
             'title' => 'Predictions - DiaCheck',
             'active' => 'predictions',
+            'predictions' => $predictions,
         ]);
     }
+
 
     public function predictions(Request $request)
     {
@@ -73,5 +76,35 @@ class PredictionsController extends Controller
             'message' => 'Failed to get prediction from Flask API',
             'data' => null
         ], 500);
+    }
+
+    
+    public function show($id)
+    {
+        $prediction = Predictions::where('id', $id)->where('user_id', Auth::user()->id)->first();
+
+        if (!$prediction) {
+            return redirect()->route('predictions.index')->with('error', 'History not found or you do not have permission to view it.');
+        }
+
+        return view('pages.prediction-details', [
+            'title' => 'Prediction Details - DiaCheck',
+            'active' => 'predictions',
+            'prediction' => $prediction,
+        ]);
+    }
+
+
+    public function destroy($id)
+    {
+        $prediction = Predictions::where('id', $id)->where('user_id', Auth::user()->id)->first();
+
+        if (!$prediction) {
+            return redirect()->route('predictions.index')->with('error', 'History not found or you do not have permission to delete it.');
+        }
+
+        $prediction->delete();
+
+        return redirect()->route('predictions.index')->with('success', 'History deleted successfully!');
     }
 }

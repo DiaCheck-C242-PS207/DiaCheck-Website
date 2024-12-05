@@ -364,54 +364,135 @@ input.form-control:-webkit-autofill {
 
 
 /* Predictions */
+.actions .search-box {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-color: var(--background-input);
+  border-radius: 10px;
+  padding: 10px 15px;
+  gap: 4px;
+}
+.actions .search-box input {
+  width: clamp(100px, 35vw, 200px);
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+  color: var(--text-color);
+}
+.actions .search-box i {
+  color: var(--text-color);
+}
+.actions .search-box:focus-within,
+.actions .search-box:focus-within i {
+  color: var(--primary-color);
+  transition: var(--tran-03);
+}
+.container-filters button {
+  background-color: transparent;
+  border: none;
+}
+
+.dropdown-menu {
+  background-color: var(--nav-color);
+}
+.dropdown-menu li a {
+  color: var(--text-color) !important;
+}
+.dropdown-menu li a:hover {
+  color: #fff !important;
+  transition: var(--tran-03);
+  background-color: var(--primary-color) !important;
+}
+
+
+.add-prediction-btn-1,
+.add-prediction-btn-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.add-prediction-btn-2 {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+@media (max-width: 360px) {
+  .actions {
+    margin-top: 10px !important;
+  }
+  .actions,
+  .actions .search-box {
+    width: 100% !important;
+  }
+  .actions .search-box input {
+    width: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .actions .add-prediction-btn-1 {
+    display: none !important;
+  }
+  .actions .add-prediction-btn-2 {
+    display: flex !important;
+  }
+}
+
+
 .card {
   background-color: var(--nav-color) !important;
   border: none !important;
   border-radius: 10px !important;
 }
-.card-body input {
+.modal input {
   background-color: var(--background-input) !important;
   border-color: var(--input-color) !important;
   border-radius: 10px !important;
   color: var(--text-color) !important;
 }
-.card-body input:focus {
+.modal input:focus {
   border-color: var(--primary-color) !important;
   box-shadow: none !important;
 }
-.card-body input::placeholder {
-  color: var(--input-color);
+.modal input::placeholder {
+  color: var(--input-color) !important;
 }
-.card-body select {
+.modal select {
   background-color: var(--background-input) !important;
   border-color: var(--input-color) !important;
   border-radius: 10px !important;
   color: var(--text-color) !important;
 }
-.card-body select:focus {
+.modal select:focus {
   border-color: var(--primary-color) !important;
   box-shadow: none !important;
 }
-/* Predictions End */
 
-
-
-/* History */
-.more-detail-content table tr td,
-.more-detail-content table tr th {
+.table-prediction th {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+  text-wrap: nowrap !important;
+}
+.table-prediction tr td {
   background-color: var(--nav-color) !important;
   color: var(--text-color) !important;
 }
-/* History End */
-
-
+/* Predictions End */
 
 
 
 
 /* Edit Akun */
 .container-edit-akun .card {
-  background-color: var(--background-input);
+  background-color: var(--background-input) !important;
   border: none;
   border-radius: 10px;
 }
@@ -433,7 +514,6 @@ input.form-control:-webkit-autofill {
 }
 
 .container-edit-akun .edit-profile,
-.container-edit-akun .history,
 .container-edit-akun .logout {
   background-color: var(--background-input);
   border: none;
@@ -447,7 +527,6 @@ input.form-control:-webkit-autofill {
   background-color: transparent !important;
 }
 .container-edit-akun .edit-profile:hover i,
-.container-edit-akun .history:hover i,
 .container-edit-akun .edit-profile:hover h5,
 .container-edit-akun .history:hover h5 {
   color: var(--primary-color);

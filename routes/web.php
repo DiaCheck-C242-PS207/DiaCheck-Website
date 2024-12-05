@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PredictionsController;
 use App\Http\Controllers\ProfileController;
@@ -14,16 +13,12 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-
 Route::middleware('auth')->group(function () {
     Route::resource('predictions', PredictionsController::class);
     Route::post('/predictions', [PredictionsController::class, 'predictions']);
     
     Route::resource('profile', ProfileController::class);
-    Route::delete('/profile/{id}/delete-avatar', [ProfileController::class, 'deleteAvatar'])->name('profile.delete.avatar');
-
-    Route::resource('history', HistoryController::class);
-    
+    Route::delete('/profile/{id}/delete-avatar', [ProfileController::class, 'deleteAvatar'])->name('profile.delete.avatar');    
 });
 
 
