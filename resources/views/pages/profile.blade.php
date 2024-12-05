@@ -50,15 +50,6 @@
                     </a>
                 </div>
 
-                <a href="{{ route('history.index') }}" class="history text-decoration-none py-4">
-                    <div class="row d-flex justify-content-between text-decoration-none">
-                        <div class="col d-flex align-items-center gap-3">
-                            <i class='bx bx-history text-color fs-2 icon'></i>
-                            <h5 class="text-color py-0 my-0">Prediction history</h5>
-                        </div>
-                    </div>
-                </a>
-
                 <a id="logout-confirmation" href="{{ route('logout') }}" class="logout text-decoration-none py-4"
                     onclick="event.preventDefault(); logout();">
                     <div class="row d-flex justify-content-between">

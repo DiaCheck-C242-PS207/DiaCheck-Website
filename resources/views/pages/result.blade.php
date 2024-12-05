@@ -25,7 +25,6 @@
                             @endforeach
                         </p>
                         <p class="text-color fst-italic opacity-75">"{{ $message }}"</p>
-                        <a href="{{ route('history.index') }}" class="d-flex align-items-center justify-content-end gap-1">More details <i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
             </div>
