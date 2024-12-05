@@ -12,9 +12,9 @@
                         </a>
     
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item {{ $currentFilter == 'Latest' ? 'bg-primary text-light' : '' }}" wire:click="sortBy('latest')" style="cursor: pointer;">Latest</a></li>
-                            <li><a class="dropdown-item {{ $currentFilter == 'Oldest' ? 'bg-primary text-light' : '' }}" wire:click="sortBy('oldest')" style="cursor: pointer;">Oldest</a></li>
-                            <li><a class="dropdown-item {{ $currentFilter == 'Percentage' ? 'bg-primary text-light' : '' }}" wire:click="sortBy('percentage')" style="cursor: pointer;">Percentage</a></li>
+                            <li><a class="dropdown-item {{ $currentFilter == 'Latest' ? 'active' : '' }}" wire:click="sortBy('latest')" style="cursor: pointer;">Latest</a></li>
+                            <li><a class="dropdown-item {{ $currentFilter == 'Oldest' ? 'active' : '' }}" wire:click="sortBy('oldest')" style="cursor: pointer;">Oldest</a></li>
+                            <li><a class="dropdown-item {{ $currentFilter == 'Percentage' ? 'active' : '' }}" wire:click="sortBy('percentage')" style="cursor: pointer;">Percentage</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,6 +62,10 @@
                     <p class="text-center">No history available.</p>
                 </div>
             @endforelse
+        </div>
+
+        <div class="pagination-container d-flex justify-content-center">
+            {{ $predictions->links() }}
         </div>
     </div>
 </div>

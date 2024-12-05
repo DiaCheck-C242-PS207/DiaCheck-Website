@@ -404,6 +404,10 @@ input.form-control:-webkit-autofill {
   transition: var(--tran-03);
   background-color: var(--primary-color) !important;
 }
+.dropdown-menu li a.active {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+}
 
 
 .add-prediction-btn-1,
@@ -664,3 +668,37 @@ input[type="file"]::-webkit-file-upload-button {
   }
 }
 /* Toasts End */
+
+
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination-container nav ul li a,
+.pagination-container nav ul li button {
+  background-color: transparent;
+  border: 1px solid var(--input-color);
+  color: var(--text-color);
+}
+.pagination-container nav ul li:hover button,
+.pagination-container nav ul li:focus-within button{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: none;
+}
+
+.pagination-container nav ul li.disabled span {
+  background-color: transparent;
+  border-color: var(--input-color);
+  color: var(--text-color);
+}
+.pagination-container nav ul li.active span {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+/* Pagination End */
