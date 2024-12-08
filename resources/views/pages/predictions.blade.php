@@ -65,7 +65,7 @@
 
                         <div class="mb-3">
                             <label for="blood_glucose_level" class="form-label">Blood Glucose Level:</label>
-                            <input type="number" id="blood_glucose_level" name="blood_glucose_level" step="1"
+                            <input type="number" id="blood_glucose_level" name="blood_glucose_level" step="0.01"
                                 class="form-control" placeholder="Enter your blood glucose level ex.100" required>
                         </div>
 
@@ -114,11 +114,6 @@
                     form.submit();
                 }
             });
-        }
-
-        function toggleDetails(id) {
-            const detailContent = document.getElementById('detail-content-' + id);
-            detailContent.style.display = detailContent.style.display === 'none' ? 'block' : 'none';
         }
     </script>
 @endpush
