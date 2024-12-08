@@ -38,7 +38,7 @@ class ProfileController extends Controller
 
         // Cek apakah pengguna yang terautentikasi adalah pemilik dari data yang ingin diperbarui
         if (Auth::id() !== (int) $id) {
-            return redirect()->route('profile.index')->with('error', 'Oops, an error occurred!');
+            return redirect()->route('profile.index')->with('error', 'Oops, something wrong here!');
         }
     
         $user = User::find($id);
@@ -76,7 +76,7 @@ class ProfileController extends Controller
     {
         // Cek apakah pengguna yang terautentikasi adalah pemilik dari data yang ingin diperbarui
         if (Auth::id() !== (int) $id) {
-            return redirect()->route('profile.index')->with('error', 'Oops, an error occurred!');
+            return redirect()->route('profile.index')->with('error', 'Oops, something wrong here!');
         }
     
         $user = User::find($id);

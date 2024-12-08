@@ -15,7 +15,7 @@
             </a>
         </li>
         <li class="list {{ $active === 'articles' ? 'active' : '' }}">
-            <a href="#" title="Articles">
+            <a href="{{ route('articles.index') }}" title="Articles">
                 <span class="icon">
                     <i class='bx {{ $active == 'articles' ? 'bxs-news' : 'bx-news' }}'></i>
                 </span>

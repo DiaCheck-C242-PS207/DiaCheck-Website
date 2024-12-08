@@ -13,7 +13,7 @@ class PredictionsController extends Controller
     {
         $predictions = Predictions::where('user_id', Auth::user()->id)->orderBy('id', 'desc')->get();
         return view('pages.predictions', [
-            'title' => 'Predictions - DiaCheck',
+            'title' => 'Predictions- DiaCheck',
             'active' => 'predictions',
             'predictions' => $predictions,
         ]);
@@ -104,7 +104,7 @@ class PredictionsController extends Controller
         }
 
         return view('pages.prediction-details', [
-            'title' => 'Prediction Details - DiaCheck',
+            'title' => 'DiaCheck - Prediction Details',
             'active' => 'predictions',
             'prediction' => $prediction,
         ]);

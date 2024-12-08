@@ -16,7 +16,7 @@
                         class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'predictions' ? 'active' : '' }}"><i class='bx {{ $active == 'predictions' ? 'bxs-notepad' : 'bx-notepad' }}'></i> Predictions</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#"
+                    <a href="{{ route('articles.index') }}"
                         class="nav-link text-center d-flex align-items-center gap-1 {{ $active == 'articles' ? 'active' : '' }}"><i class='bx {{ $active == 'articles' ? 'bxs-news' : 'bx-news' }}'></i> Articles</a>
                 </li>
                 <li class="nav-item">
