@@ -34,15 +34,31 @@ class PredictionsController extends Controller
         ]);
 
         // Kirim data ke API Flask
-        $response = Http::post('http://127.0.0.1:8080/predictions', [
-            'gender' => $validatedData['gender'],
-            'age' => $validatedData['age'],
-            'hypertension' => $validatedData['hypertension'],
-            'heart_disease' => $validatedData['heart_disease'],
-            'bmi' => $validatedData['bmi'],
-            'HbA1c_level' => $validatedData['HbA1c_level'],
-            'blood_glucose_level' => $validatedData['blood_glucose_level'],
-        ]);
+        try {
+            $response = Http::timeout(3600)->post('http://127.0.0.1:8080/predictions', [
+                'gender' => $validatedData['gender'],
+                'age' => $validatedData['age'],
+                'hypertension' => $validatedData['hypertension'],
+                'heart_disease' => $validatedData['heart_disease'],
+                'bmi' => $validatedData['bmi'],
+                'HbA1c_level' => $validatedData['HbA1c_level'],
+                'blood_glucose_level' => $validatedData['blood_glucose_level'],
+            ]);
+        } catch (\Illuminate\Http\Client\ConnectionException $e) {
+            echo "<script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong! Please refresh the page.',
+                        confirmButtonText: 'OK',
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload();
+                        }
+                    });
+                </script>";
+            return back();
+        }
 
         if ($response->successful()) {
             // Ambil hasil prediksi dari API Flask
