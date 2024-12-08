@@ -2,6 +2,12 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ url('assets/css/article.css') }}">
+    <style>
+        ol li,
+        ul li {
+            color: #6c747c !important;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -11,7 +17,8 @@
                 <a href="{{ route('articles.index') }}" class="py-0 my-0 text-color" title="Back">
                     <i class='bx bx-arrow-back fw-semibold py-0 my-0 mt-1'></i>
                 </a>
-                <span class="py-0 my-0 fs-6 fw-semibold article-title-nav" id="article-title-nav">{{ $article->title }}</span>
+                <span class="py-0 my-0 fs-6 fw-semibold article-title-nav"
+                    id="article-title-nav">{{ $article->title }}</span>
             </div>
             <div class="dark-mode">
                 <button class="dark-mode-toggle"><i class='bx bx-sun'></i></button>
@@ -26,7 +33,7 @@
     <div class="container bg-color px-3 px-md-5 mt-4">
         <h1 class="text-color fw-bold">{{ $article->title }}</h1>
         <hr class="bg-hr-modal">
-        
+
         <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
             <div class="author d-flex gap-2">
                 <div class="profile-image">
@@ -43,7 +50,8 @@
                     <div class="author-name">
                         <p class="my-0 py-0 primary-color fw-semibold">{{ $author->name }}</p>
                     </div>
-                    <a class="d-flex align-items-center gap-1 p-0 m-0 text-decoration-none" onclick="viewDetails('{{ $article->id }}')" style="cursor: pointer;">
+                    <a class="d-flex align-items-center gap-1 p-0 m-0 text-decoration-none"
+                        onclick="viewDetails('{{ $article->id }}')" style="cursor: pointer;">
                         <p class="mb-0 text-secondary fs-7">Diperbarui pada
                             {{ Carbon\Carbon::parse($article->updated_at)->translatedFormat('d F Y, H:i') }} WIB</p>
                         <i class='bx bx-chevron-down text-secondary' id="icon-down-{{ $article->id }}"></i>
@@ -55,7 +63,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="actions d-flex align-items-center justify-content-between gap-2">
                 <div class="share">
                     <button onclick="shareToFacebook('{{ url('/article/' . $article->slug) }}')" class="facebook"
