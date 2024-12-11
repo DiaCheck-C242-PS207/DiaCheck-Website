@@ -452,7 +452,7 @@ input.form-control:-webkit-autofill {
 
 
 .card {
-  background-color: var(--nav-color) !important;
+  background-color: var(--background-input) !important;
   border: none !important;
   border-radius: 10px !important;
 }
