@@ -70,3 +70,8 @@ php artisan serve
 ```
 
 Server is running. Open url `http://127.0.0.1:8000` in browser.
+
+## Note
+
+You can visit this article to find out how to use Laravel Socialite
+[Cara Membuat Login with Google Menggunakan Laravel Socialite di Laravel 11](https://blog.hikmal-falah.com/detail/cara-membuat-login-with-google-menggunakan-laravel-socialite-di-laravel-11)
