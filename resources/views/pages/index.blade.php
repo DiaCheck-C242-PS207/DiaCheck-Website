@@ -1,6 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
+    <div class="alert alert-primary alert-dismissible fade show download-alert" role="alert">
+        Don't have DiaCheck app yet? <a href="https://drive.google.com/drive/folders/1vvmI01LDKr24uiafyKBnihc-HMKTSGxt" class="alert-link" target="_blank">Download now!</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
     <h1>Hi, {{ Auth::user()->name }}👋</h1>
     <div class="row mt-4">
         @if ($prediction)

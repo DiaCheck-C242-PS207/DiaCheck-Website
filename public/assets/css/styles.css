@@ -158,6 +158,12 @@ h6, a, span, p {
 /* Text Size End */
 
 
+@media (min-width: 768px) {
+  .download-alert {
+    display: none !important;
+  }
+}
+
 
 /* Auth */
 .pass-logo {
